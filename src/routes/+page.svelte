@@ -4,8 +4,8 @@
 </script>
 
 <svelte:head>
-	<title>OpenPensieve - Your Digital Pensieve</title>
-	<meta name="description" content="Your digital Pensieve — a personal reflection dashboard for reviewing conversations and thoughts over time." />
+	<title>OpenPensieve - Your Digital Memory Palace</title>
+	<meta name="description" content="Your digital memory palace — a personal reflection dashboard for reviewing conversations and thoughts over time." />
 </svelte:head>
 
 <div class="min-h-screen bg-pensieve-bg-deep text-pensieve-text-primary flex items-center justify-center p-6">
@@ -27,7 +27,7 @@
 
 			<!-- Description -->
 			<p class="text-xl md:text-2xl text-pensieve-text-secondary mb-4 leading-relaxed">
-				Your digital Pensieve — a personal reflection dashboard
+				Your digital memory palace — a personal reflection dashboard
 			</p>
 			
 			<p class="text-base text-pensieve-text-tertiary max-w-2xl mx-auto">

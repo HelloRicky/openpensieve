@@ -1,4 +1,4 @@
--- Pensieve Database Schema
+-- OpenPensieve Database Schema
 -- Initial migration: sessions, messages, tags, and usage tracking
 
 -- Sessions table: stores OpenClaw session metadata

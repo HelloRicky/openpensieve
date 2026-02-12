@@ -1,8 +1,8 @@
-# Pensieve Architecture
+# OpenPensieve Architecture
 
 ## Overview
 
-Pensieve is a personal reflection dashboard that processes OpenClaw session transcripts and presents them with AI-generated insights, tags, and analytics.
+OpenPensieve is a personal reflection dashboard that processes OpenClaw session transcripts and presents them with AI-generated insights, tags, and analytics.
 
 ## Tech Stack
 
@@ -97,7 +97,7 @@ Pensieve is a personal reflection dashboard that processes OpenClaw session tran
 ## File Structure
 
 ```
-pensieve/
+openpensieve/
 ├── src/
 │   ├── routes/              # SvelteKit pages
 │   │   └── +page.svelte    # Landing page
@@ -175,8 +175,8 @@ vercel deploy
 
 ### Self-Hosted (Docker)
 ```bash
-docker build -t pensieve .
-docker run -p 3000:3000 --env-file .env pensieve
+docker build -t openpensieve .
+docker run -p 3000:3000 --env-file .env openpensieve
 ```
 
 ### Self-Hosted (VPS)

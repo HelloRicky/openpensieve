@@ -1,8 +1,8 @@
-# Pensieve Setup Instructions
+# OpenPensieve Setup Instructions
 
 ## 🎉 Project Created Successfully!
 
-The Pensieve project scaffold is complete and ready to be pushed to GitHub.
+The OpenPensieve project scaffold is complete and ready to be pushed to GitHub.
 
 ## 📁 Project Location
 
@@ -52,7 +52,7 @@ The current GitHub token lacks repository creation permissions. You'll need to c
 
 **Option A: Via GitHub Web Interface**
 1. Go to https://github.com/new
-2. Repository name: `pensieve`
+2. Repository name: `openpensieve`
 3. Description: "A personal reflection dashboard for reviewing conversations and thoughts over time"
 4. Choose: **Public**
 5. **Do not** initialize with README (we already have one)
@@ -60,7 +60,7 @@ The current GitHub token lacks repository creation permissions. You'll need to c
 
 **Option B: Via GitHub CLI (with proper permissions)**
 ```bash
-gh repo create crshBanern/pensieve --public --source=. --push
+gh repo create crshBanern/openpensieve --public --source=. --push
 ```
 
 ### 2. Push to GitHub
@@ -71,10 +71,10 @@ After creating the repository, run:
 cd /home/ubuntu/.openclaw/workspace-linus/pensieve
 
 # Add the remote (replace USERNAME with your GitHub username)
-git remote add origin https://github.com/USERNAME/pensieve.git
+git remote add origin https://github.com/USERNAME/openpensieve.git
 
 # Or if using SSH:
-git remote add origin git@github.com:USERNAME/pensieve.git
+git remote add origin git@github.com:USERNAME/openpensieve.git
 
 # Push to GitHub
 git branch -M main
@@ -130,7 +130,7 @@ Visit http://localhost:5173
 ## 📊 Architecture Notes Saved
 
 Architecture documentation has been saved to Notion:
-https://www.notion.so/Pensieve-Architecture-30532aa2de8881afa4fecbd10ea90196
+https://www.notion.so/OpenPensieve-Architecture-30532aa2de8881afa4fecbd10ea90196
 
 ## 🔐 Security Checklist
 
@@ -143,7 +143,7 @@ Before pushing to GitHub, verify:
 ## 📦 Project Structure
 
 ```
-pensieve/
+openpensieve/
 ├── .env.example              # Environment template
 ├── .gitignore                # Git ignore rules
 ├── ARCHITECTURE.md           # Technical documentation

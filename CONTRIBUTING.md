@@ -1,4 +1,4 @@
-# Contributing to Pensieve
+# Contributing to OpenPensieve
 
 Thank you for your interest in contributing! 🎉
 
@@ -64,4 +64,4 @@ Open a discussion or reach out in the community Discord.
 
 ---
 
-Thanks for making Pensieve better! 🧠✨
+Thanks for making OpenPensieve better! 🧠✨

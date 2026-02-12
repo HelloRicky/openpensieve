@@ -1,5 +1,5 @@
 {
-  "name": "pensieve",
+  "name": "openpensieve",
   "version": "0.1.0",
   "description": "A personal reflection dashboard for reviewing conversations and thoughts over time",
   "type": "module",
@@ -40,6 +40,6 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/crshBanern/pensieve"
+    "url": "https://github.com/crshBanern/openpensieve"
   }
 }

@@ -1,8 +1,8 @@
-# Pensieve 🧠
+# OpenPensieve 🧠
 
 > A personal reflection dashboard for reviewing your conversations and thoughts over time.
 
-Pensieve reads your OpenClaw session transcripts and presents them in a beautiful, searchable dashboard with AI-generated insights, tags, and usage statistics.
+OpenPensieve reads your OpenClaw session transcripts and presents them in a beautiful, searchable dashboard with AI-generated insights, tags, and usage statistics.
 
 ## Features
 
@@ -35,8 +35,8 @@ _Coming soon_
 ### 1. Clone and Install
 
 ```bash
-git clone https://github.com/crshBanern/pensieve.git
-cd pensieve
+git clone https://github.com/crshBanern/openpensieve.git
+cd openpensieve
 npm install
 ```
 
@@ -94,8 +94,8 @@ vercel deploy
 ### Option 2: Self-Hosted (Docker)
 
 ```bash
-docker build -t pensieve .
-docker run -p 3000:3000 --env-file .env pensieve
+docker build -t openpensieve .
+docker run -p 3000:3000 --env-file .env openpensieve
 ```
 
 ### Option 3: Any Node.js Host
