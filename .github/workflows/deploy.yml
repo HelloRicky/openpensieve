@@ -22,6 +22,7 @@ jobs:
         run: npm run build
         
       - name: Deploy to Cloudflare Pages
+        id: deploy
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -30,15 +31,20 @@ jobs:
       - name: Notify Discord
         if: success()
         run: |
+          DEPLOY_URL="https://openpensieve.pages.dev"
+          if [ "${{ github.ref_name }}" = "dev" ]; then
+            DEPLOY_URL="https://dev.openpensieve.pages.dev"
+          fi
           curl -X POST "${{ secrets.DISCORD_WEBHOOK }}" \
             -H "Content-Type: application/json" \
-            -d '{
-              "embeds": [{
-                "title": "🚀 ${{ github.event.repository.name }} deployed",
-                "color": 5763719,
-                "fields": [
-                  {"name": "Branch", "value": "`${{ github.ref_name }}`", "inline": true},
-                  {"name": "Commit", "value": "`${{ github.sha }}`", "inline": true}
+            -d "{
+              \"embeds\": [{
+                \"title\": \"🚀 openpensieve deployed\",
+                \"color\": 5763719,
+                \"fields\": [
+                  {\"name\": \"Branch\", \"value\": \"\`${{ github.ref_name }}\`\", \"inline\": true},
+                  {\"name\": \"Commit\", \"value\": \"\`$(echo ${{ github.sha }} | cut -c1-7)\`\", \"inline\": true},
+                  {\"name\": \"URL\", \"value\": \"$DEPLOY_URL\", \"inline\": false}
                 ]
               }]
-            }'
+            }"
