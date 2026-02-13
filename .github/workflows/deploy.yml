@@ -1,0 +1,44 @@
+name: Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches: [master, dev]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Build
+        run: npm run build
+        
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          command: pages deploy .svelte-kit/cloudflare --project-name=openpensieve
+          
+      - name: Notify Discord
+        if: success()
+        run: |
+          curl -X POST "${{ secrets.DISCORD_WEBHOOK }}" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "embeds": [{
+                "title": "🚀 ${{ github.event.repository.name }} deployed",
+                "color": 5763719,
+                "fields": [
+                  {"name": "Branch", "value": "`${{ github.ref_name }}`", "inline": true},
+                  {"name": "Commit", "value": "`${{ github.sha }}`", "inline": true}
+                ]
+              }]
+            }'
